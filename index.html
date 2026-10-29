@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TODO: replace with your name and a one-line description -->
+  <title>Your Name — Design & Code</title>
+  <meta name="description" content="Portfolio of Your Name: product design, creative coding, and experiments with generative AI.">
+  <meta name="theme-color" content="#f4f1ea">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='12' fill='%23ff4f1f'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    document.documentElement.classList.add('js');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#work">Skip to work</a>
+
+  <header class="nav" data-nav>
+    <a class="nav__logo" href="#top" aria-label="Home">
+      <span class="nav__dot" aria-hidden="true"></span>
+      <!-- TODO: your name or initials -->
+      <span>Your Name</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#lab">Lab</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+      <span class="theme-toggle__icon" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- ───────── Hero ───────── -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="hero__field" id="field" aria-hidden="true"></canvas>
+      <div class="hero__inner">
+        <!-- TODO: your role and location -->
+        <p class="eyebrow">Designer &amp; creative technologist · City, Country</p>
+        <h1 class="hero__title" id="hero-title">
+          I design interfaces for tools that <em>think back.</em>
+        </h1>
+        <!-- TODO: a short intro sentence -->
+        <p class="hero__lede">
+          Product design, creative code, and small experiments in how people and generative systems make things together.
+        </p>
+
+        <form class="prompt" data-prompt autocomplete="off">
+          <label class="prompt__label" for="prompt-input">Prompt the background</label>
+          <div class="prompt__bar">
+            <span class="prompt__caret" aria-hidden="true">&gt;</span>
+            <input class="prompt__input" id="prompt-input" name="prompt" type="text" maxlength="80"
+                   placeholder="describe a mood, e.g. “neon rain at 3am”">
+            <button class="prompt__submit" type="submit">Generate</button>
+          </div>
+          <div class="prompt__chips" role="group" aria-label="Presets">
+            <button type="button" class="chip" data-preset="calm">calm</button>
+            <button type="button" class="chip" data-preset="storm">storm</button>
+            <button type="button" class="chip" data-preset="bloom">bloom</button>
+            <button type="button" class="chip" data-preset="glitch">glitch</button>
+          </div>
+          <p class="prompt__readout mono" data-readout aria-live="polite">seed — · mode —</p>
+        </form>
+      </div>
+      <a class="hero__scroll mono" href="#work">scroll ↓</a>
+    </section>
+
+    <!-- ───────── Marquee ───────── -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Figma</span><span>✺</span><span>TypeScript</span><span>✺</span><span>Prototyping</span><span>✺</span>
+        <span>Design systems</span><span>✺</span><span>p5.js</span><span>✺</span><span>Prompt design</span><span>✺</span>
+        <span>WebGL</span><span>✺</span><span>User research</span><span>✺</span>
+        <span>Figma</span><span>✺</span><span>TypeScript</span><span>✺</span><span>Prototyping</span><span>✺</span>
+        <span>Design systems</span><span>✺</span><span>p5.js</span><span>✺</span><span>Prompt design</span><span>✺</span>
+        <span>WebGL</span><span>✺</span><span>User research</span><span>✺</span>
+      </div>
+    </div>
+
+    <!-- ───────── Work ───────── -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="section__head">
+        <h2 class="section__title" id="work-title">Selected work <sup class="mono" data-count>06</sup></h2>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-filter="design" aria-pressed="false">Design</button>
+          <button type="button" class="chip" data-filter="code" aria-pressed="false">Code</button>
+          <button type="button" class="chip" data-filter="ai" aria-pressed="false">AI</button>
+        </div>
+      </div>
+
+      <!-- TODO: replace each card with a real project. data-tags drives the filters;
+           data-seed + data-style pick the generated thumbnail (or swap the canvas for an <img>). -->
+      <div class="grid">
+        <article class="card card--wide reveal" data-tags="design ai">
+          <a class="card__link" href="projects/project-template.html">
+            <div class="card__media"><canvas class="thumb" data-seed="11" data-style="flow"></canvas></div>
+            <div class="card__body">
+              <p class="card__meta mono"><span>2026</span><span>Product design · AI</span></p>
+              <h3 class="card__title">Project Title One</h3>
+              <p class="card__desc">A prompt-first editing tool for a creative team — from research to shipped interface.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card reveal" data-tags="code">
+          <a class="card__link" href="projects/project-template.html">
+            <div class="card__media"><canvas class="thumb" data-seed="42" data-style="grid"></canvas></div>
+            <div class="card__body">
+              <p class="card__meta mono"><span>2025</span><span>Front-end · Open source</span></p>
+              <h3 class="card__title">Project Title Two</h3>
+              <p class="card__desc">A component library with motion primitives, used across three products.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card reveal" data-tags="design">
+          <a class="card__link" href="projects/project-template.html">
+            <div class="card__media"><canvas class="thumb" data-seed="7" data-style="rings"></canvas></div>
+            <div class="card__body">
+              <p class="card__meta mono"><span>2025</span><span>UX research · Mobile</span></p>
+              <h3 class="card__title">Project Title Three</h3>
+              <p class="card__desc">Redesigning onboarding for a fintech app; activation up by a number you can brag about.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card reveal" data-tags="code ai">
+          <a class="card__link" href="projects/project-template.html">
+            <div class="card__media"><canvas class="thumb" data-seed="93" data-style="waves"></canvas></div>
+            <div class="card__body">
+              <p class="card__meta mono"><span>2024</span><span>Creative code · Generative</span></p>
+              <h3 class="card__title">Project Title Four</h3>
+              <p class="card__desc">A live installation where visitors' voices steer a generative score and visuals.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card reveal" data-tags="design code">
+          <a class="card__link" href="projects/project-template.html">
+            <div class="card__media"><canvas class="thumb" data-seed="5" data-style="blobs"></canvas></div>
+            <div class="card__body">
+              <p class="card__meta mono"><span>2024</span><span>Design system · Tokens</span></p>
+              <h3 class="card__title">Project Title Five</h3>
+              <p class="card__desc">A token pipeline from Figma to code that kept two platforms in sync.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card card--wide reveal" data-tags="ai design">
+          <a class="card__link" href="projects/project-template.html">
+            <div class="card__media"><canvas class="thumb" data-seed="28" data-style="glitch"></canvas></div>
+            <div class="card__body">
+              <p class="card__meta mono"><span>2023</span><span>Interaction design · AI</span></p>
+              <h3 class="card__title">Project Title Six</h3>
+              <p class="card__desc">Patterns for showing uncertainty, sources, and undo in an AI writing assistant.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+      <p class="grid__empty mono" data-empty hidden>Nothing here yet — try another filter.</p>
+    </section>
+
+    <!-- ───────── Lab ───────── -->
+    <section class="section section--lab" id="lab" aria-labelledby="lab-title">
+      <div class="section__head">
+        <h2 class="section__title" id="lab-title">The lab</h2>
+        <p class="section__note">Small, unfinished, and mostly for fun. Sketches, prompts, and prototypes.</p>
+      </div>
+      <!-- TODO: link each experiment to a demo, repo, or write-up -->
+      <ol class="lab">
+        <li class="lab__item reveal">
+          <a href="#">
+            <span class="lab__num mono">01</span>
+            <span class="lab__title">Prompt-driven UI exploration</span>
+            <span class="lab__desc">How different prompt structures change what a model gives back.</span>
+            <span class="lab__tag mono">prompts</span>
+            <span class="lab__arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li class="lab__item reveal">
+          <a href="#">
+            <span class="lab__num mono">02</span>
+            <span class="lab__title">Creative AI workflows</span>
+            <span class="lab__desc">Generative tools stitched into a real design process, end to end.</span>
+            <span class="lab__tag mono">workflow</span>
+            <span class="lab__arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li class="lab__item reveal">
+          <a href="#">
+            <span class="lab__num mono">03</span>
+            <span class="lab__title">Interface patterns for AI tools</span>
+            <span class="lab__desc">Notes and prototypes on how people steer, trust, and correct generative systems.</span>
+            <span class="lab__tag mono">patterns</span>
+            <span class="lab__arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li class="lab__item reveal">
+          <a href="#">
+            <span class="lab__num mono">04</span>
+            <span class="lab__title">This website's background</span>
+            <span class="lab__desc">A flow field that turns any sentence into a seed. Type something at the top.</span>
+            <span class="lab__tag mono">generative</span>
+            <span class="lab__arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ───────── About ───────── -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <h2 class="section__title" id="about-title">About</h2>
+      <div class="about__grid">
+        <!-- TODO: your bio -->
+        <div class="about__bio reveal">
+          <p class="about__lead">
+            I'm a designer who writes code, working where interface design meets generative systems.
+          </p>
+          <p>
+            Say a little about your background here: where you've worked, what kind of problems you like, and what you're curious about. Two or three short paragraphs is plenty.
+          </p>
+          <p>
+            Previously at Company A and Studio B. Currently open to new projects and collaborations.
+          </p>
+        </div>
+        <dl class="about__lists reveal">
+          <div>
+            <dt class="mono">Disciplines</dt>
+            <dd>Product design</dd><dd>Interaction design</dd><dd>Prototyping</dd><dd>Creative coding</dd>
+          </div>
+          <div>
+            <dt class="mono">Tools</dt>
+            <dd>Figma</dd><dd>TypeScript / React</dd><dd>p5.js · WebGL</dd><dd>LLM APIs</dd>
+          </div>
+          <div>
+            <dt class="mono">Currently</dt>
+            <dd>Designing at Company</dd><dd>Reading a good book</dd><dd>Building a weird synth</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ───────── Contact ───────── -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Contact</p>
+      <h2 class="contact__title" id="contact-title">Let's make something <em>strange.</em></h2>
+      <!-- TODO: your email and links -->
+      <a class="contact__email" href="mailto:hello@example.com">hello@example.com</a>
+      <ul class="contact__links mono">
+        <li><a href="#">LinkedIn ↗</a></li>
+        <li><a href="https://github.com/">GitHub ↗</a></li>
+        <li><a href="#">Read.cv ↗</a></li>
+        <li><a href="#">Résumé (PDF) ↗</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>© <span data-year></span> Your Name</span>
+    <span>Built by hand, with a little help from machines.</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

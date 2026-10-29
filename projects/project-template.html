@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TODO: duplicate this file for each project and rename it, e.g. projects/prompt-editor.html -->
+  <title>Project Title One — Your Name</title>
+  <meta name="description" content="Case study: a prompt-first editing tool for a creative team.">
+  <meta name="theme-color" content="#f4f1ea">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='12' fill='%23ff4f1f'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    document.documentElement.classList.add('js');
+  </script>
+</head>
+<body>
+  <header class="nav" data-nav>
+    <a class="nav__logo" href="../index.html" aria-label="Home">
+      <span class="nav__dot" aria-hidden="true"></span>
+      <span>Your Name</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="../index.html#work">Work</a></li>
+        <li><a href="../index.html#lab">Lab</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+      <span class="theme-toggle__icon" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <main class="case">
+    <a class="case__back mono" href="../index.html#work">← All work</a>
+
+    <p class="eyebrow">Case study · 2026</p>
+    <h1 class="case__title">Project Title One</h1>
+    <p class="case__lede">
+      One or two sentences on what this was and why it mattered. Lead with the outcome, not the process.
+    </p>
+
+    <dl class="case__facts mono">
+      <div><dt>Role</dt><dd>Lead product designer</dd></div>
+      <div><dt>Timeline</dt><dd>4 months, 2026</dd></div>
+      <div><dt>Team</dt><dd>2 designers, 5 engineers</dd></div>
+      <div><dt>Tools</dt><dd>Figma, React, LLM APIs</dd></div>
+    </dl>
+
+    <!-- Swap the canvas for <img src="..." alt="..."> once you have real images. -->
+    <div class="case__cover reveal"><canvas class="thumb" data-seed="11" data-style="flow"></canvas></div>
+
+    <section class="case__section reveal">
+      <h2><span class="mono">01</span>Overview</h2>
+      <div>
+        <p>The context in one paragraph: who the users were, what they were trying to do, and where things were breaking down.</p>
+        <p>Add a second paragraph with constraints: deadlines, technical limits, business goals, or anything that shaped the decisions.</p>
+      </div>
+    </section>
+
+    <section class="case__section reveal">
+      <h2><span class="mono">02</span>The problem</h2>
+      <div>
+        <p>State the core problem as plainly as you can. A good test: could a stranger repeat it back after one read?</p>
+        <p>Back it up with what you learned from research, data, or early prototypes.</p>
+      </div>
+    </section>
+
+    <section class="case__section reveal">
+      <h2><span class="mono">03</span>Process</h2>
+      <div>
+        <p>A short summary of how you got from problem to solution.</p>
+        <ol class="case__steps">
+          <li><div><strong>Research</strong><span>Interviews, audits, or analytics that shaped direction.</span></div></li>
+          <li><div><strong>Explore</strong><span>Concepts and prototypes you tried, including what you threw away.</span></div></li>
+          <li><div><strong>Test</strong><span>How you validated the direction with real people.</span></div></li>
+          <li><div><strong>Ship</strong><span>What it took to build and launch, and how you worked with engineering.</span></div></li>
+        </ol>
+        <figure class="case__figure">
+          <div class="case__cover"><canvas class="thumb" data-seed="12" data-style="grid"></canvas></div>
+          <figcaption class="mono">Fig. 1 — Caption describing the image.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case__section reveal">
+      <h2><span class="mono">04</span>Outcome</h2>
+      <div>
+        <p>What changed because of this work. Numbers if you have them, quotes if you don't.</p>
+        <div class="stats">
+          <div class="stat"><span class="stat__num">+38%</span><span class="stat__label">Placeholder metric</span></div>
+          <div class="stat"><span class="stat__num">2.4×</span><span class="stat__label">Placeholder metric</span></div>
+          <div class="stat"><span class="stat__num">12k</span><span class="stat__label">Placeholder metric</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case__section reveal">
+      <h2><span class="mono">05</span>Reflection</h2>
+      <div>
+        <p>What you'd do differently, what surprised you, and what you took into the next project.</p>
+      </div>
+    </section>
+
+    <!-- TODO: point this at the next case study -->
+    <a class="case__next" href="project-template.html">
+      <span class="mono">Next project →</span>
+      <strong>Project Title Two</strong>
+    </a>
+  </main>
+
+  <footer class="footer mono">
+    <span>© <span data-year></span> Your Name</span>
+    <span>Built by hand, with a little help from machines.</span>
+    <a href="#">Back to top ↑</a>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
